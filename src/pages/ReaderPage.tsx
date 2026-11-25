@@ -279,7 +279,15 @@ export default function ReaderPage() {
     sceneIndices,
     activeScene,
     activeWord,
-    onListen: playScene,
+    onListen: (i: number, startAt?: number) => {
+      const n = audio.narration;
+      if (startAt === undefined && n?.episodeId === ep?.id && n.sceneIndex === i && !n.unavailable) {
+        if (n.playing) audio.pauseNarration();
+        else audio.resumeNarration();
+        return;
+      }
+      playScene(i, startAt);
+    },
     onSeekWord: seekWord
   };
 

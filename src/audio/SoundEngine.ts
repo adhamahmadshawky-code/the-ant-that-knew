@@ -135,6 +135,8 @@ export class SoundEngine {
     pause() {
         if (!this.ctx || !this.master) return;
         this.master.gain.setTargetAtTime(0, this.ctx.currentTime, 0.15);
+        const c = this.ctx;
+        window.setTimeout(() => { if (c.state === 'running' && this.master && this.master.gain.value < 0.05) void c.suspend(); }, 700);
     }
 
     resume() {

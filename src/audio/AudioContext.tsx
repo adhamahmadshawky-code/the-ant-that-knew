@@ -137,8 +137,15 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         timeCbs.current.forEach((cb) => cb(t));
         setNarration((n) => (n ? { ...n, currentTime: t, duration: narrationEl.current?.duration || 0 } : n));
       });
+      narrationEl.current.addEventListener('pause', () => {
+        setNarration((n) => (n && n.playing ? { ...n, playing: false } : n));
+      });
+      narrationEl.current.addEventListener('playing', () => {
+        setNarration((n) => (n && !n.playing ? { ...n, playing: true } : n));
+      });
       narrationEl.current.addEventListener('ended', () => {
         const idx = narrationRef.current?.sceneIndex ?? 0;
+        setNarration((n) => (n ? { ...n, playing: false } : n));
         endedCbs.current.forEach((cb) => cb(idx));
       });
       narrationEl.current.addEventListener('error', () => {
@@ -186,6 +193,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       el.play().catch(() => {
         setNarration((n) => (n ? { ...n, playing: false } : n));
       });
+      soundscape.current?.resume();
       applyVolumes();
     },
     [applyVolumes]
@@ -201,11 +209,15 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     playNarration,
     pauseNarration: () => {
       narrationEl.current?.pause();
+      soundscape.current?.pause();
+      ambientEl.current?.pause();
       setNarration((n) => (n ? { ...n, playing: false } : n));
       applyVolumes();
     },
     resumeNarration: () => {
       narrationEl.current?.play().catch(() => undefined);
+      soundscape.current?.resume();
+      if (ambientEl.current?.src && ambient?.kind === 'file' && ambient.active) ambientEl.current.play().catch(() => undefined);
       setNarration((n) => (n ? { ...n, playing: true } : n));
       applyVolumes();
     },
@@ -217,6 +229,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     },
     stopNarration: () => {
       narrationEl.current?.pause();
+      soundscape.current?.pause();
+      ambientEl.current?.pause();
       setNarration(null);
       applyVolumes();
     },
