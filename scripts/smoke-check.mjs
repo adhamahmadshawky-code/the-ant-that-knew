@@ -16,32 +16,28 @@ const browser = await chromium.launch({ executablePath: '/usr/bin/google-chrome'
 const page = await browser.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(String(e)));
-await page.goto('http://localhost:4174/story/season-01/s01e99', { waitUntil: 'networkidle' });
+await page.goto('http://localhost:4174/story/season-01/s01e01', { waitUntil: 'networkidle' });
 const counts = await page.evaluate(() => ({
-  dialogue: document.querySelectorAll('.r-dialogue').length,
-  pull: document.querySelectorAll('.r-pull').length,
-  quote: document.querySelectorAll('.r-quote').length,
-  fullimg: document.querySelectorAll('.r-fig-full').length,
-  gallery: document.querySelectorAll('.gallery').length,
-  spoiler: document.querySelectorAll('.spoiler-box').length,
-  note: document.querySelectorAll('.r-note').length,
+  scenes: document.querySelectorAll('section.scene').length,
+  sceneImages: document.querySelectorAll('.scene-fig img').length,
+  wordSpans: document.querySelectorAll('.w').length,
   chapterEnd: document.querySelectorAll('.r-chapter-end').length,
   placeholderBadge: document.querySelectorAll('.badge-placeholder').length
 }));
 console.log(JSON.stringify(counts));
-// spoiler reveal
-await page.click('.spoiler-box .chip-btn');
-await page.waitForTimeout(300);
-console.log('spoiler revealed:', await page.locator('.spoiler-box.is-open').count());
-// konami easter egg
-for (const k of ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight']) await page.keyboard.press(k);
-await page.waitForTimeout(300);
-console.log('easter egg shown:', await page.locator('.egg-overlay').count());
+if (counts.scenes !== 15) throw new Error(`expected 15 scenes, got ${counts.scenes}`);
+if (counts.placeholderBadge !== 0) throw new Error('placeholder badge still rendered');
+// sample episode route must no longer resolve to content
+await page.goto('http://localhost:4174/story/season-01/s01e99', { waitUntil: 'networkidle' });
+const leftover = await page.evaluate(() => document.querySelectorAll('section.scene').length);
+console.log('s01e99 scenes after removal:', leftover);
+if (leftover !== 0) throw new Error('s01e99 still renders scenes');
 // mark completed fired when chapter-end visible
+await page.goto('http://localhost:4174/story/season-01/s01e01', { waitUntil: 'networkidle' });
 await page.locator('.r-chapter-end').scrollIntoViewIfNeeded();
 await page.waitForTimeout(800);
-const completed = await page.evaluate(() => JSON.parse(localStorage.getItem('atk.progress.v1')).episodes?.s01e99?.completed === true);
+const completed = await page.evaluate(() => JSON.parse(localStorage.getItem('atk.progress.v1')).episodes?.s01e01?.completed === true);
 console.log('completed marked:', completed);
 console.log('page errors:', errors.length ? errors : 'none');
-await page.screenshot({ path: '/tmp/shot-sample.png' });
+await page.screenshot({ path: '/tmp/shot-smoke.png' });
 await browser.close(); server.close();

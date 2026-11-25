@@ -66,7 +66,6 @@ the build. The app picks it up automatically.
 
 - **Season 1** ships with the two published episodes (Arabic, RTL, illustrated,
   fully narrated with word-level tracking and a composed soundscape per scene).
-- One clearly-labeled **placeholder** episode demonstrates every content block type.
 - Encyclopedia and timeline entries are derived strictly from published episodes -
   no invented lore.
 
