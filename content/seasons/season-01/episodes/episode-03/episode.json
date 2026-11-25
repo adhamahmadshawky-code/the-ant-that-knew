@@ -1,0 +1,17 @@
+{
+  "id": "s01e03",
+  "seasonId": "season-01",
+  "number": 3,
+  "title": "العاصفة",
+  "subtitle": "الحلقة الثالثة",
+  "description": "حين تضرب عاصفة مفاجئة أطراف المستعمرة، تتعطل مسارات العودة وتجد عاملة جمع البذور نفسها أمام موقف لم تعهده من قبل. نملة عالقة تحت ورقة مقلوبة، ومجموعة تبتعد نحو الأمان، وعاصفة تقترب بسرعة. ينتهي اليوم بإنقاذ صغير، لكنه سيصبح بداية علاقة ستغيّر معنى العالم بالنسبة إلى البطلة.",
+  "language": "ar",
+  "direction": "rtl",
+  "coverImage": "images/comic3_01.jpg",
+  "publishedAt": "2026-11-25",
+  "status": "published",
+  "featured": true,
+  "placeholder": false,
+  "soundscape": "sound.json",
+  "soundscapeLabel": "موسيقى ومؤثرات المشهد"
+}

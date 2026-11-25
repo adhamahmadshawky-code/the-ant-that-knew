@@ -64,7 +64,7 @@ the build. The app picks it up automatically.
 
 ## Current content
 
-- **Season 1** ships with the two published episodes (Arabic, RTL, illustrated,
+- **Season 1** ships with the three published episodes (Arabic, RTL, illustrated,
   fully narrated with word-level tracking and a composed soundscape per scene).
 - Encyclopedia and timeline entries are derived strictly from published episodes -
   no invented lore.

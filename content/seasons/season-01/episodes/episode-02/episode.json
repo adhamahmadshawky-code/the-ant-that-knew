@@ -10,7 +10,7 @@
   "coverImage": "images/comic2_01.jpg",
   "publishedAt": "2026-11-25",
   "status": "published",
-  "featured": true,
+  "featured": false,
   "placeholder": false,
   "soundscape": "sound.json",
   "soundscapeLabel": "موسيقى ومؤثرات المشهد"
