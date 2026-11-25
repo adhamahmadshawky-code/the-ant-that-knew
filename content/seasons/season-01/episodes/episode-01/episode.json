@@ -1,0 +1,17 @@
+{
+  "id": "s01e01",
+  "seasonId": "season-01",
+  "number": 1,
+  "title": "المدينة التي لا تنام",
+  "subtitle": "الحلقة الأولى",
+  "description": "أولى حلقات «أنا»: خمس عشرة لوحة مع النص الكامل وقراءة صوتية بالفصحى تتبع الكلمات.",
+  "language": "ar",
+  "direction": "rtl",
+  "coverImage": "images/comic_01.jpg",
+  "publishedAt": "2026-11-24",
+  "status": "published",
+  "featured": false,
+  "placeholder": false,
+  "soundscape": "sound.json",
+  "soundscapeLabel": "موسيقى ومؤثرات المشهد"
+}

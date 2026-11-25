@@ -1,0 +1,60 @@
+/* The Ant That Knew - design tokens
+   Palette: deep forest green, almost-black, muted earthy brown,
+   warm ivory, subtle amber. */
+:root {
+  --ink: #0d120e;
+  --ink-2: #101711;
+  --ink-3: #151e16;
+  --forest: #1d3527;
+  --forest-2: #244330;
+  --moss: #33553f;
+  --bark: #6b5844;
+  --bark-2: #8a7258;
+  --ivory: #f2ead9;
+  --ivory-dim: #c9bda6;
+  --ivory-faint: #9a9078;
+  --amber: #d8b36a;
+  --amber-bright: #ecca85;
+  --amber-deep: #a9853f;
+  --line: rgba(242, 234, 217, 0.13);
+  --line-strong: rgba(242, 234, 217, 0.26);
+  --danger: #d07a5c;
+
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Literata', 'Iowan Old Style', Georgia, serif;
+  --font-arabic: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', 'Sakkal Majalla', serif;
+  --font-ui: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+
+  --measure: 38rem;
+  --header-h: 4rem;
+  --radius: 6px;
+  --shadow-1: 0 2px 18px rgba(0, 0, 0, 0.45);
+  --shadow-2: 0 12px 48px rgba(0, 0, 0, 0.55);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reader themes */
+[data-reader-theme='dark'] {
+  --r-bg: var(--ink);
+  --r-bg-raise: var(--ink-3);
+  --r-text: var(--ivory);
+  --r-text-dim: var(--ivory-dim);
+  --r-accent: var(--amber);
+  --r-line: var(--line);
+}
+[data-reader-theme='light'] {
+  --r-bg: #f5efe2;
+  --r-bg-raise: #fdf9ef;
+  --r-text: #2a2a24;
+  --r-text-dim: #5c5646;
+  --r-accent: #8a6420;
+  --r-line: rgba(42, 42, 36, 0.16);
+}
+[data-reader-theme='sepia'] {
+  --r-bg: #efe3c8;
+  --r-bg-raise: #f6ecd4;
+  --r-text: #42351f;
+  --r-text-dim: #6d5c40;
+  --r-accent: #96682a;
+  --r-line: rgba(66, 53, 31, 0.18);
+}
