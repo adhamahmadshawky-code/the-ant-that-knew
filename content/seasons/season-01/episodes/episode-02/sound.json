@@ -1,1 +1,150 @@
-{"beds":[{"wind":0.05,"rumble":0.1,"rustle":0.1,"trickle":0,"cicada":0,"pulse":0,"chirp":false,"drop":false,"music":0.75,"drone":0.1},{"wind":0.04,"rumble":0.05,"rustle":0.25,"trickle":0,"cicada":0,"pulse":0.15,"chirp":false,"drop":false,"music":0.7,"drone":0.15},{"wind":0.05,"rumble":0.05,"rustle":0.35,"trickle":0,"cicada":0,"pulse":0.1,"chirp":false,"drop":false,"music":0.65,"drone":0.2},{"wind":0.03,"rumble":0.15,"rustle":0.15,"trickle":0,"cicada":0,"pulse":0.4,"chirp":false,"drop":false,"music":0.6,"drone":0.3},{"wind":0.08,"rumble":0,"rustle":0.45,"trickle":0,"cicada":0.12,"pulse":0,"chirp":true,"drop":false,"music":0.95,"drone":0},{"wind":0,"rumble":0.3,"rustle":0.1,"trickle":0.2,"cicada":0,"pulse":0,"chirp":false,"drop":true,"music":0.9,"drone":0},{"wind":0,"rumble":0.25,"rustle":0.1,"trickle":0.1,"cicada":0,"pulse":0.15,"chirp":false,"drop":true,"music":0.7,"drone":0.3},{"wind":0,"rumble":0.3,"rustle":0.15,"trickle":0.05,"cicada":0,"pulse":0.2,"chirp":false,"drop":false,"music":0.65,"drone":0.3},{"wind":0,"rumble":0.3,"rustle":0.1,"trickle":0,"cicada":0,"pulse":0.25,"chirp":false,"drop":false,"music":0.6,"drone":0.4},{"wind":0,"rumble":0.35,"rustle":0.4,"trickle":0,"cicada":0,"pulse":0.2,"chirp":false,"drop":false,"music":0.6,"drone":0.3},{"wind":0,"rumble":0.3,"rustle":0.1,"trickle":0,"cicada":0,"pulse":0.3,"chirp":false,"drop":false,"music":0.55,"drone":0.45},{"wind":0,"rumble":0.35,"rustle":0.2,"trickle":0.05,"cicada":0,"pulse":0.1,"chirp":false,"drop":true,"music":0.6,"drone":0.25},{"wind":0,"rumble":0.4,"rustle":0.05,"trickle":0,"cicada":0,"pulse":0.15,"chirp":false,"drop":false,"music":0.45,"drone":0.5},{"wind":0.02,"rumble":0.3,"rustle":0.15,"trickle":0,"cicada":0,"pulse":0.2,"chirp":false,"drop":false,"music":0.5,"drone":0.4},{"wind":0.02,"rumble":0.25,"rustle":0.05,"trickle":0,"cicada":0,"pulse":0.2,"chirp":false,"drop":false,"music":0.4,"drone":0.45},{"wind":0.1,"rumble":0,"rustle":0.25,"trickle":0,"cicada":0.1,"pulse":0,"chirp":true,"drop":false,"music":0.85,"drone":0},{"wind":0.06,"rumble":0.15,"rustle":0.3,"trickle":0,"cicada":0,"pulse":0.35,"chirp":false,"drop":false,"music":0.7,"drone":0.15},{"wind":0,"rumble":0.35,"rustle":0.1,"trickle":0,"cicada":0,"pulse":0.25,"chirp":false,"drop":false,"music":0.65,"drone":0.25},{"wind":0,"rumble":0.3,"rustle":0.05,"trickle":0,"cicada":0,"pulse":0.15,"chirp":false,"drop":false,"music":0.55,"drone":0.35},{"wind":0.04,"rumble":0.2,"rustle":0.05,"trickle":0,"cicada":0,"pulse":0.1,"chirp":false,"drop":false,"music":0.45,"drone":0.4},{"wind":0.06,"rumble":0.15,"rustle":0.2,"trickle":0,"cicada":0,"pulse":0.2,"chirp":false,"drop":false,"music":0.45,"drone":0.4},{"wind":0.02,"rumble":0.1,"rustle":0,"trickle":0,"cicada":0,"pulse":0,"chirp":false,"drop":false,"music":0.3,"drone":0.35},{"wind":0.06,"rumble":0.1,"rustle":0.3,"trickle":0,"cicada":0.05,"pulse":0.1,"chirp":true,"drop":false,"music":0.8,"drone":0.1},{"wind":0.04,"rumble":0.15,"rustle":0.1,"trickle":0,"cicada":0,"pulse":0.45,"chirp":false,"drop":false,"music":0.5,"drone":0.4},{"wind":0,"rumble":0.3,"rustle":0.3,"trickle":0.3,"cicada":0,"pulse":0,"chirp":false,"drop":false,"music":0.9,"drone":0},{"wind":0.08,"rumble":0.05,"rustle":0.2,"trickle":0,"cicada":0.05,"pulse":0.1,"chirp":false,"drop":false,"music":0.6,"drone":0.35},{"wind":0.05,"rumble":0.05,"rustle":0.08,"trickle":0,"cicada":0,"pulse":0,"chirp":false,"drop":false,"music":0.75,"drone":0.2},{"wind":0.03,"rumble":0.1,"rustle":0.05,"trickle":0,"cicada":0,"pulse":0,"chirp":false,"drop":false,"music":0.8,"drone":0.15}],"tense":[16,17,18,23],"effects":{"3":"alarm","6":"riser","27":"bell"}}
+{
+ "scenes": [
+  {
+   "music": "colony"
+  },
+  {
+   "music": "colony"
+  },
+  {
+   "music": "colony"
+  },
+  {
+   "music": "colony"
+  },
+  {
+   "music": "extinction",
+   "sfx": [
+    {
+     "id": "drip",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "extinction",
+   "sfx": [
+    {
+     "id": "drip",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "fungus"
+  },
+  {
+   "music": "fungus"
+  },
+  {
+   "music": "fungus"
+  },
+  {
+   "music": "colony",
+   "musicGain": 0.8
+  },
+  {
+   "music": "colony",
+   "musicGain": 0.8
+  },
+  {
+   "music": "extinction"
+  },
+  {
+   "music": "extinction"
+  },
+  {
+   "music": "extinction"
+  },
+  {
+   "music": "extinction"
+  },
+  {
+   "music": "outside",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "music": "outside",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "music": "queen",
+   "musicGain": 0.8
+  },
+  {
+   "music": "queen",
+   "musicGain": 0.8
+  },
+  {
+   "music": "extinction",
+   "musicGain": 0.8
+  },
+  {
+   "music": "extinction",
+   "musicGain": 0.8
+  },
+  {
+   "music": "extinction",
+   "musicGain": 0.8
+  },
+  {
+   "music": "fungus",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "fungus",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "fungus",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "extinction",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "music": "fungus",
+   "sfx": [
+    {
+     "id": "wind",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "music": "extinction",
+   "musicGain": 0.8
+  }
+ ]
+}

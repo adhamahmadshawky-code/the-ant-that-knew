@@ -108,7 +108,7 @@ export default function ReaderPage() {
         }
         if (current && current.index !== activeScene) {
           setActiveScene(current.index);
-          audio.setSoundscapeScene(current.index);
+          audio.setSoundscapeScene(current.index, true);
         }
         const now = Date.now();
         if (now - lastSave > 1500) {

@@ -58,7 +58,7 @@ interface AudioApi {
   ambient: AmbientState | null;
   startAmbientFile(src: string, label: string): void;
   startSoundscape(config: SoundConfig, label: string): void;
-  setSoundscapeScene(sceneIndex: number): void;
+  setSoundscapeScene(sceneIndex: number, fromScroll?: boolean): void;
   stopAmbient(): void;
   playSfx(src: string): void;
 }
@@ -123,6 +123,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       const on = !p.disabled && !p.muted && p.ambientVolume > 0 && p.masterVolume > 0;
       soundscape.current.setMusic(on);
       soundscape.current.setSfx(on);
+      soundscape.current.setLevel(p.masterVolume * p.ambientVolume);
     }
   }, []);
 
@@ -266,7 +267,11 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       applyVolumes();
       setAmbient({ kind: 'soundscape', label, active: true, unavailable: false });
     },
-    setSoundscapeScene: (i) => soundscape.current?.setScene(i),
+    setSoundscapeScene: (i, fromScroll) => {
+      // While narration plays, the narrated scene decides the sound, not the scroll position.
+      const n = narrationRef.current;
+      soundscape.current?.setScene(fromScroll && n?.playing ? n.sceneIndex : i);
+    },
     stopAmbient: () => {
       ambientEl.current?.pause();
       soundscape.current?.stop();

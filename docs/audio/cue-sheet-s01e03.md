@@ -55,3 +55,63 @@
 | ANA-11 The Choice | | | لم تُنتج |
 | ANA-12 A Small Connection | | | لم تُنتج |
 | ANA-13 An Unfamiliar Scent | | | لم تُنتج |
+
+
+## التركيب الفعلي على الموقع (الموسيقى والمؤثرات المرخّصة)
+
+تم استبدال الصوت الاصطناعي المولّد (synth) بملفات CC0 مرخّصة. التعليق الصوتي وتتبّع الكلمات لم يتغيّرا. الربط في `sound.json` لهذه الحلقة، والملفات في `content/audio/`.
+المطابقة مع المقطوعات المسماة أعلاه تقريبية في المزاج (مقطوعات ambient عامة، وليست مؤلّفة خصيصًا للمشروع).
+
+المعالجة: تحويل إلى mono / mp3، دمج بداية الملف بنهايته (crossfade) ليتكرر بلا فجوة، وضبط المستوى: الموسيقى حوالي -15 LU والمؤثرات حوالي -18 LU تحت التعليق الصوتي (-17.9 LUFS). CC0 لا يتطلب نسبة، والتسجيل هنا للتوثيق فقط.
+
+| المشهد | الموسيقى | المؤثرات |
+| --- | --- | --- |
+| scene-01 | colony | morning |
+| scene-02 | colony | morning |
+| scene-03 | colony | wind |
+| scene-04 | colony | wind |
+| scene-05 | colony | wind |
+| scene-06 | queen | wind |
+| scene-07 | queen | wind, rain |
+| scene-08 | outside | rain, thunder |
+| scene-09 | outside | rain, thunder |
+| scene-10 | outside | rain, thunder |
+| scene-11 | outside | rain, thunder |
+| scene-12 | outside | rain, thunder |
+| scene-13 | outside | rain, thunder |
+| scene-14 | - | rain |
+| scene-15 | outside | rain, water |
+| scene-16 | queen | rain |
+| scene-17 | queen | rain |
+| scene-18 | queen | rain |
+| scene-19 | queen | rain |
+| scene-20 | - | drip |
+| scene-21 | queen | morning, drip |
+| scene-22 | queen | morning, drip |
+| scene-23 | colony | - |
+| scene-24 | colony | - |
+| scene-25 | colony | - |
+| scene-26 | colony | - |
+| scene-27 | colony | - |
+| scene-28 | colony | - |
+| scene-29 | colony | - |
+| scene-30 | colony | drip |
+| scene-31 | fungus | - |
+| scene-32 | fungus | - |
+
+### المصادر والتراخيص
+
+| الطبقة | الملف في الريبو | العمل والمؤلف | المصدر | الترخيص |
+| --- | --- | --- | --- | --- |
+| موسيقى: Colony (ANA-02) | `content/audio/music/colony.mp3` | Loopable Dungeon Ambience, jaggedstone | https://opengameart.org/content/loopable-dungeon-ambience | CC0 |
+| موسيقى: Fungus (ANA-07) | `content/audio/music/fungus.mp3` | Lost in a bad place (horror ambience loop), congusbongus | https://opengameart.org/content/lost-in-a-bad-place-horror-ambience-loop | CC0 |
+| موسيقى: Extinction (ANA-06) | `content/audio/music/extinction.mp3` | Ancient caverns (horror ambient loop), congusbongus | https://opengameart.org/content/ancient-caverns-horror-ambient-loop | CC0 |
+| موسيقى: Outside World | `content/audio/music/outside.mp3` | Dark Place (loop), skylethefrench | https://opengameart.org/content/dark-place-loop | CC0 |
+| موسيقى: Queen (ANA-08) | `content/audio/music/queen.mp3` | Emotional piano loop, extenz | https://opengameart.org/content/emotional-piano-loop | CC0 |
+| مؤثر: ريح | `content/audio/sfx/wind.mp3` | Wind whoosh loop, sketchman3 | https://opengameart.org/content/wind-whoosh-loop | CC0 |
+| مؤثر: رعد ومطر | `content/audio/sfx/thunder.mp3` | Rain long thunder, wuxiascrub | https://opengameart.org/content/rain-long-thunder | CC0 |
+| مؤثر: صراصير الليل | `content/audio/sfx/cicada.mp3` | Cicada sounds, syncopika | https://opengameart.org/content/cicada-sounds | CC0 |
+| مؤثر: قطرات/أجواء كهف | `content/audio/sfx/drip.mp3` | Dripping water loop, qubodup | https://opengameart.org/content/dripping-water-loop | CC0 |
+| مؤثر: صباح طبيعي | `content/audio/sfx/morning.mp3` | Amb morning sounds perfect loop, kresiek-the-furry | https://opengameart.org/content/amb-morning-sounds-perfect-loop | CC0 |
+| مؤثر: جريان ماء | `content/audio/sfx/water.mp3` | Waterflow sound, tyberiusgames | https://opengameart.org/content/waterflow-sound | CC0 |
+| مؤثر: مطر | `content/audio/sfx/rain.mp3` | Rain (loopable), ylmir | https://opengameart.org/content/rain-loopable | CC0 |

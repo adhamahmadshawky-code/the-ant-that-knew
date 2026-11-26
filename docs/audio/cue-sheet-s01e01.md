@@ -48,3 +48,46 @@
 | ANA-03 Seeds of Order | | | لم تُنتج |
 | ANA-04 A World Within | | | لم تُنتج |
 | ANA-05 The First Silence | | | لم تُنتج |
+
+
+## التركيب الفعلي على الموقع (الموسيقى والمؤثرات المرخّصة)
+
+تم استبدال الصوت الاصطناعي المولّد (synth) بملفات CC0 مرخّصة. التعليق الصوتي وتتبّع الكلمات لم يتغيّرا. الربط في `sound.json` لهذه الحلقة، والملفات في `content/audio/`.
+المطابقة مع المقطوعات المسماة أعلاه تقريبية في المزاج (مقطوعات ambient عامة، وليست مؤلّفة خصيصًا للمشروع).
+
+المعالجة: تحويل إلى mono / mp3، دمج بداية الملف بنهايته (crossfade) ليتكرر بلا فجوة، وضبط المستوى: الموسيقى حوالي -15 LU والمؤثرات حوالي -18 LU تحت التعليق الصوتي (-17.9 LUFS). CC0 لا يتطلب نسبة، والتسجيل هنا للتوثيق فقط.
+
+| المشهد | الموسيقى | المؤثرات |
+| --- | --- | --- |
+| scene-01 | colony | morning, wind |
+| scene-02 | colony | - |
+| scene-03 | colony | - |
+| scene-04 | colony | drip |
+| scene-05 | colony | drip |
+| scene-06 | colony | - |
+| scene-07 | colony | - |
+| scene-08 | colony | wind, cicada |
+| scene-09 | colony | wind, morning, cicada |
+| scene-10 | colony | wind, morning, cicada |
+| scene-11 | colony | - |
+| scene-12 | queen | - |
+| scene-13 | colony | wind, cicada |
+| scene-14 | extinction | wind |
+| scene-15 | outside | wind |
+
+### المصادر والتراخيص
+
+| الطبقة | الملف في الريبو | العمل والمؤلف | المصدر | الترخيص |
+| --- | --- | --- | --- | --- |
+| موسيقى: Colony (ANA-02) | `content/audio/music/colony.mp3` | Loopable Dungeon Ambience, jaggedstone | https://opengameart.org/content/loopable-dungeon-ambience | CC0 |
+| موسيقى: Fungus (ANA-07) | `content/audio/music/fungus.mp3` | Lost in a bad place (horror ambience loop), congusbongus | https://opengameart.org/content/lost-in-a-bad-place-horror-ambience-loop | CC0 |
+| موسيقى: Extinction (ANA-06) | `content/audio/music/extinction.mp3` | Ancient caverns (horror ambient loop), congusbongus | https://opengameart.org/content/ancient-caverns-horror-ambient-loop | CC0 |
+| موسيقى: Outside World | `content/audio/music/outside.mp3` | Dark Place (loop), skylethefrench | https://opengameart.org/content/dark-place-loop | CC0 |
+| موسيقى: Queen (ANA-08) | `content/audio/music/queen.mp3` | Emotional piano loop, extenz | https://opengameart.org/content/emotional-piano-loop | CC0 |
+| مؤثر: ريح | `content/audio/sfx/wind.mp3` | Wind whoosh loop, sketchman3 | https://opengameart.org/content/wind-whoosh-loop | CC0 |
+| مؤثر: رعد ومطر | `content/audio/sfx/thunder.mp3` | Rain long thunder, wuxiascrub | https://opengameart.org/content/rain-long-thunder | CC0 |
+| مؤثر: صراصير الليل | `content/audio/sfx/cicada.mp3` | Cicada sounds, syncopika | https://opengameart.org/content/cicada-sounds | CC0 |
+| مؤثر: قطرات/أجواء كهف | `content/audio/sfx/drip.mp3` | Dripping water loop, qubodup | https://opengameart.org/content/dripping-water-loop | CC0 |
+| مؤثر: صباح طبيعي | `content/audio/sfx/morning.mp3` | Amb morning sounds perfect loop, kresiek-the-furry | https://opengameart.org/content/amb-morning-sounds-perfect-loop | CC0 |
+| مؤثر: جريان ماء | `content/audio/sfx/water.mp3` | Waterflow sound, tyberiusgames | https://opengameart.org/content/waterflow-sound | CC0 |
+| مؤثر: مطر | `content/audio/sfx/rain.mp3` | Rain (loopable), ylmir | https://opengameart.org/content/rain-loopable | CC0 |
